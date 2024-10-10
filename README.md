@@ -1,18 +1,18 @@
-## Getting Started
+Proposta:
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Você deve criar um sistema de gestão de produtos para uma loja. O sistema deve permitir que a loja gerencie diferentes tipos de produtos, com características e comportamentos distintos.
 
-## Folder Structure
+Parte 1: Abstração
+Crie uma classe abstrata chamada Produto que tenha os seguintes atributos e métodos:
+Atributos:
+nome (String)
+preco (double)
+Métodos:
+calcularDesconto(double porcentagem): um método que retorna o preço do produto após aplicar o desconto.
+Implemente pelo menos duas subclasses de Produto. Cada uma dessas classes deve implementar o método calcularDesconto() de forma diferente:
 
-The workspace contains two folders by default, where:
+Parte 2: Polimorfismo
+Crie uma classe chamada Estoque que possua um método chamado exibirPrecosComDesconto(List<Produto> produtos). Esse método deve percorrer a lista de produtos e chamar o método calcularDesconto() de cada um, exibindo o preço após o desconto no console.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+Parte 3: Associação
+Na classe Estoque, adicione um atributo do tipo List<Produto> que representará os produtos disponíveis. Crie métodos para adicionar e remover produtos dessa lista.No método main, crie uma instância da classe Estoque, adicione alguns produtos a ele e chame o método exibirPrecosComDesconto() para mostrar os preços dos produtos com desconto.
